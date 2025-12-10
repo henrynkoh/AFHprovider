@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from "react";
 import NavBar from "@/components/NavBar";
 import SearchBar from "@/components/SearchBar";
 import ProviderTable from "@/components/ProviderTable";
+import CaseStudies from "@/components/CaseStudies";
 import { sampleProviders } from "@/data/sampleData";
 import { AFHProvider } from "@/types";
 
@@ -184,9 +185,14 @@ export default function Home() {
               </a>
             </div>
           </div>
+        </section>
 
-          {/* Search Section */}
-          <div className="mb-12" id="search">
+        {/* Case Studies Section - Star Feature */}
+        <CaseStudies />
+
+        {/* Search Section */}
+        <section className="container mx-auto px-4 py-12" id="search">
+          <div className="mb-12">
             <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
           </div>
 
